@@ -2,7 +2,6 @@ import { Entity, Column } from 'typeorm';
 import { BaseModel } from '@libs/database/base.model';
 import { DeepPartial } from '@libs/types/deep-partial.type';
 import { UserRoleEnum } from '../enums/user.enum';
-import { LangEnum } from '../../../libs/enums/language-code.enum';
 
 @Entity()
 export class User extends BaseModel {
@@ -36,8 +35,4 @@ export class User extends BaseModel {
 
   @Column({ nullable: true })
   lastSeenAt?: Date;
-
-  @Column({ enum: LangEnum, default: LangEnum.EN })
-  favLang: LangEnum;
-
 }
