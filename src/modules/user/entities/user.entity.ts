@@ -9,6 +9,11 @@ export class User extends BaseModel {
   constructor(input?: DeepPartial<User>) {
     super(input);
   }
+  @Column({ type: 'text' })
+  firstName: string;
+
+  @Column({ type: 'text' })
+  lastName: string;
 
   @Column({
     unique: true,

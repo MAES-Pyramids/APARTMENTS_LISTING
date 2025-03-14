@@ -6,7 +6,7 @@ import { Apartment } from './entities/apartment.entity';
 
 @Module({
   imports: [DatabaseModule.forFeature([Apartment])],
-  providers: [ApartmentsService],
   controllers: [ApartmentsController],
+  providers: [ApartmentsService],
 })
 export class ApartmentsModule {}

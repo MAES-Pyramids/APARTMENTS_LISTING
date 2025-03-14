@@ -21,7 +21,7 @@ export class ApartmentsController {
     return await this.apartmentService.createApartment(createApartmentDto);
   }
 
-  @Get()
+  @Get('')
   @Serialize(PaginatorResponse, ApartmentShortResponseDto)
   async geApartments(
     @Query('filter') filter: FilterApartmentsInput,

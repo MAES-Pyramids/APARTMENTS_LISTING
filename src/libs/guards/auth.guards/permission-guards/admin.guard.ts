@@ -24,7 +24,7 @@ export class AdminOnlyGuard implements IAuthGuard {
       ? new BaseHttpException(error)
       : this.unauthorizedException;
 
-    if (user.role !== UserRoleEnum.ADMIN) throw unauthorizedException;
+    if (user?.role !== UserRoleEnum.ADMIN) throw unauthorizedException;
 
     return true;
   }
