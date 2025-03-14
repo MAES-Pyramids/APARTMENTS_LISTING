@@ -14,10 +14,6 @@ export class ApartmentShortResponseDto {
   unitName: string;
 
   @Expose()
-  @Type(() => UnitAddressShortDto)
-  unitAddress: UnitAddressShortDto;
-
-  @Expose()
   averageRating: number;
 
   @Expose()
@@ -31,6 +27,16 @@ export class ApartmentShortResponseDto {
 
   @Expose()
   propertyCategory: PropertyCategoryEnum;
+
+  @Expose()
+  rentingPrice: number;
+
+  @Expose()
+  description?: string;
+
+  @Expose()
+  @Type(() => UnitAddressShortDto)
+  unitAddress: UnitAddressShortDto;
 
   @Expose()
   @Type(() => UnitDetailsShortDto)

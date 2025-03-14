@@ -3,7 +3,7 @@ services:
     container_name: nawy-postgres
     image: postgis/postgis:latest
     ports:
-      - 5434:5432
+      - 5444:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
@@ -17,7 +17,7 @@ services:
     image: redis
     restart: always
     ports:
-      - '6379:6379'
+      - '6399:6379'
 
 volumes:
   postgres_data:
