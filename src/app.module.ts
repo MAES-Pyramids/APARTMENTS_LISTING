@@ -12,6 +12,7 @@ import { UploaderModule } from './libs/application/uploader/uploader.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { SessionModule } from './modules/session/session.module';
 import { UserModule } from './modules/user/user.module';
+import { ApartmentsModule } from './modules/apartments/apartments.module';
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { UserModule } from './modules/user/user.module';
     AuthModule,
     SessionModule,
     UserModule,
+    ApartmentsModule,
   ],
   controllers: [],
   providers: [
