@@ -58,7 +58,6 @@ export class ContextAuthService implements IContextAuthService {
     if (!userId) throw new BaseHttpException(ErrorCodeEnum.UNAUTHORIZED);
     const user = await this.userRepo.findOne({
       where: { id: userId },
-      relations: ['securityGroup', 'individual', 'organization'],
     });
 
     if (!user) throw new BaseHttpException(ErrorCodeEnum.UNAUTHORIZED);
@@ -73,7 +72,6 @@ export class ContextAuthService implements IContextAuthService {
 
     const session = await this.sessionRepo.findOne({
       where: { id: sessionId, status: SessionStatusEnum.ACTIVE },
-      relations: ['fcmToken'],
     });
 
     if (!session) throw new BaseHttpException(ErrorCodeEnum.UNAUTHORIZED);

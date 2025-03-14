@@ -40,6 +40,4 @@ export class User extends BaseModel {
   @Column({ enum: LangEnum, default: LangEnum.EN })
   favLang: LangEnum;
 
-  @Column({ nullable: true })
-  securityGroupId?: string;
 }

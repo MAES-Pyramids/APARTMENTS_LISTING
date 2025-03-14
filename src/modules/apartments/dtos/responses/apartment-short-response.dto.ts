@@ -8,6 +8,9 @@ import { UnitDetailsShortDto } from '../unit-details.dto';
 
 export class ApartmentShortResponseDto {
   @Expose()
+  id: string;
+
+  @Expose()
   unitName: string;
 
   @Expose()
