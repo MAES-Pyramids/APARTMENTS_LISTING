@@ -1,3 +1,5 @@
+import { SelectQueryBuilder, WhereExpressionBuilder, Brackets } from 'typeorm';
+import { Expose } from 'class-transformer';
 export interface PaginationRes<T> {
   items: T[];
   pageInfo: {
@@ -52,9 +54,6 @@ export abstract class PageInfo {
   @Expose()
   direction?: CursorBasedPaginationDirection;
 }
-
-import { Expose } from 'class-transformer';
-import { SelectQueryBuilder, WhereExpressionBuilder, Brackets } from 'typeorm';
 
 const DELIMITER = '|';
 

@@ -14,4 +14,5 @@ export const arErrorMessage: IErrorMessage = {
   EMAIL_ALREADY_EXISTS: 'البريد الإلكتروني موجود بالفعل',
   INVALID_EMAIL_OR_PASSWORD: 'البريد الإلكتروني أو كلمة المرور غير صحيحة',
   NO_PASSWORD: 'لا توجد كلمة مرور',
+  APARTMENT_NOT_FOUND: 'الشقة غير موجودة',
 };

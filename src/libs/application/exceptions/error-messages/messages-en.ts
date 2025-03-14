@@ -15,4 +15,5 @@ export const enErrorMessage: IErrorMessage = {
   EMAIL_ALREADY_EXISTS: 'Email already exists',
   INVALID_EMAIL_OR_PASSWORD: 'Invalid email or password',
   NO_PASSWORD: 'No password',
+  APARTMENT_NOT_FOUND: 'Apartment not found',
 };

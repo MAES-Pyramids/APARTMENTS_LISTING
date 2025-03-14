@@ -22,7 +22,7 @@ export class Apartment extends BaseModel {
   @Column({ type: 'text', unique: true })
   unitNumber: string;
 
-  @Column({ type: 'text', unique: true })
+  @Column({ type: 'text' })
   projectName: string;
 
   @Column({ type: 'boolean', default: true })

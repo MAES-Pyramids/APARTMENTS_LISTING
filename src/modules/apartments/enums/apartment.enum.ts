@@ -24,3 +24,9 @@ export enum CityEnum {
   LUXOR = 'luxor',
   ASWAN = 'aswan',
 }
+
+export enum ApartmentSortByEnum {
+  CREATED_AT = 'createdAt',
+  AVERAGE_RATING = 'averageRating',
+  RENTING_PRICE = 'rentingPrice',
+}

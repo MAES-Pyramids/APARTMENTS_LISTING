@@ -1,3 +1,4 @@
+import { PickType } from '@nestjs/mapped-types';
 import { Expose } from 'class-transformer';
 import { IsBoolean, IsInt, IsNumber } from 'class-validator';
 
@@ -22,3 +23,9 @@ export class UnitDetails {
   @IsInt()
   floorNumber: number;
 }
+
+export class UnitDetailsShortDto extends PickType(UnitDetails, [
+  'unitSize',
+  'numberOfBedrooms',
+  'numberOfBathrooms',
+] as const) {}
