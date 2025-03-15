@@ -10,6 +10,9 @@ import { SortApartmentInput } from './dtos/inputs/sort-apartment.input';
 import { PaginatorInput } from '../../libs/application/paginator/paginator.input';
 import { ApartmentSortByEnum } from './enums/apartment.enum';
 import { SortTypeEnum } from '../../libs/application/paginator/paginator.types';
+import { User } from '../user/entities/user.entity';
+import { UserRoleEnum } from '../user/enums/user.enum';
+import { watch } from 'fs';
 
 @Injectable()
 export class ApartmentsService {
@@ -54,13 +57,16 @@ export class ApartmentsService {
       limit,
     );
   }
-  // TODO: handle update watch count with queue to ensure no race conation
-  public async getApartment(apartmentId: string) {
+  // TODO: Handle watch count updates using a queue instead of serialized transactions to prevent bottlenecks.
+  public async getApartment(apartmentId: string, user: User) {
     const apartment = await this.apartmentRepo.findOneOrError(
       { id: apartmentId },
       ErrorCodeEnum.APARTMENT_NOT_FOUND,
     );
 
-    return apartment;
+    if (!user || user.role !== UserRoleEnum.ADMIN) {
+      await this.apartmentRepo.increment({ id: apartmentId }, 'watchCount', 1);
+    }
+    return { ...apartment, watchCount: apartment.watchCount + 1 };
   }
 }

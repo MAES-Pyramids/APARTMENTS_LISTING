@@ -7,7 +7,6 @@ export const currentUser = createParamDecorator(
     const request = ctx.switchToHttp().getRequest();
     const { user } = request;
 
-    if (!user) throw new BaseHttpException(ErrorCodeEnum.UNAUTHORIZED);
     if (fieldName) return user[fieldName];
     return user;
   },

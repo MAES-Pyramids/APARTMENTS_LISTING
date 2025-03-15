@@ -16,6 +16,9 @@ import { PaginatorInput } from '../../libs/application/paginator/paginator.input
 import { FilterApartmentsInput } from './dtos/inputs/filter-apartment.input';
 import { SortApartmentInput } from './dtos/inputs/sort-apartment.input';
 import { ApartmentIdInput } from './dtos/inputs/find-apartment.input';
+import { currentUser } from '../../libs/decorators/currentUser.decorator';
+import { User } from '../user/entities/user.entity';
+import { IsolationLevel, Transactional } from 'typeorm-transactional';
 
 @ApiTags('apartments')
 @Controller('apartments')
@@ -64,7 +67,11 @@ export class ApartmentsController {
   })
   @Serialize(ApartmentResponseDto)
   @ApiResponse({ status: 404, description: 'Apartment not found' })
-  async getApartment(@Param() { apartmentId }: ApartmentIdInput) {
-    return await this.apartmentService.getApartment(apartmentId);
+  @Transactional({ isolationLevel: IsolationLevel.SERIALIZABLE })
+  async getApartment(
+    @Param() { apartmentId }: ApartmentIdInput,
+    @currentUser() user: User,
+  ) {
+    return await this.apartmentService.getApartment(apartmentId, user);
   }
 }
