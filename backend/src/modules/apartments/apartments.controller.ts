@@ -1,4 +1,10 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import {
+  ApiTags,
+  ApiOperation,
+  ApiResponse,
+  ApiBearerAuth,
+} from '@nestjs/swagger';
 import { ApartmentsService } from './apartments.service';
 import { Auth } from '../../libs/decorators/auth.decorator';
 import { CreateApartmentInput } from './dtos/inputs/create-apartment.input';
@@ -11,17 +17,35 @@ import { FilterApartmentsInput } from './dtos/inputs/filter-apartment.input';
 import { SortApartmentInput } from './dtos/inputs/sort-apartment.input';
 import { ApartmentIdInput } from './dtos/inputs/find-apartment.input';
 
+@ApiTags('apartments')
 @Controller('apartments')
 export class ApartmentsController {
   constructor(private readonly apartmentService: ApartmentsService) {}
 
   @Post()
   @Auth({ allow: 'admin' })
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Create a new apartment (Admin only)' })
+  @ApiResponse({
+    status: 201,
+    description: 'Apartment created successfully',
+    type: ApartmentResponseDto,
+  })
+  @ApiResponse({ status: 400, description: 'Invalid input data' })
+  @Serialize(ApartmentResponseDto)
   async createApartment(@Body() createApartmentDto: CreateApartmentInput) {
     return await this.apartmentService.createApartment(createApartmentDto);
   }
 
-  @Get('')
+  @Get()
+  @ApiOperation({
+    summary: 'Get a list of apartments with filtering, sorting, and pagination',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'List of apartments retrieved successfully',
+    type: ApartmentShortResponseDto,
+  })
   @Serialize(PaginatorResponse, ApartmentShortResponseDto)
   async geApartments(
     @Query('filter') filter: FilterApartmentsInput,
@@ -32,7 +56,14 @@ export class ApartmentsController {
   }
 
   @Get('/:apartmentId')
+  @ApiOperation({ summary: 'Get details of a specific apartment by ID' })
+  @ApiResponse({
+    status: 200,
+    description: 'Apartment details retrieved successfully',
+    type: ApartmentResponseDto,
+  })
   @Serialize(ApartmentResponseDto)
+  @ApiResponse({ status: 404, description: 'Apartment not found' })
   async getApartment(@Param() { apartmentId }: ApartmentIdInput) {
     return await this.apartmentService.getApartment(apartmentId);
   }

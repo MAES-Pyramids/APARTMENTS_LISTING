@@ -2,27 +2,27 @@ export enum UnitTypeTypeEnum {
   APARTMENT = 'APARTMENT',
   DUPLEX = 'DUPLEX',
   VILLA = 'VILLA',
-  OFFICE = 'office',
+  OFFICE = 'OFFICE',
 }
 
 export enum PropertyCategoryEnum {
-  RESIDENTIAL = 'residential',
-  COMMERCIAL = 'commercial',
+  RESIDENTIAL = 'RESIDENTIAL',
+  COMMERCIAL = 'COMMERCIAL',
 }
 
 export enum LeaseDurationEnum {
+  YEARLY = 'YEARLY',
   MONTHLY = 'MONTHLY',
   HALF_YEARLY = 'HALF_YEARLY',
-  YEARLY = 'YEARLY',
 }
 
 export enum CityEnum {
-  CAIRO = 'cairo',
-  GIZA = 'giza',
-  ALEXANDRIA = 'alexandria',
-  Gharbia = 'gharbia',
-  LUXOR = 'luxor',
-  ASWAN = 'aswan',
+  CAIRO = 'CAIRO',
+  GIZA = 'GIZA',
+  ALEXANDRIA = 'ALEXANDRIA',
+  GHARBIA = 'GHARBIA',
+  LUXOR = 'LUXOR',
+  ASWAN = 'ASWAN',
 }
 
 export enum ApartmentSortByEnum {
