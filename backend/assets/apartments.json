@@ -1,0 +1,187 @@
+[
+  {
+    "unitName": "Luxury Apartment",
+    "unitNumber": "A101",
+    "projectName": "Skyline Towers",
+    "available": true,
+    "mainImage": "http://api.quickr.tech/nawy/storage/45ad2b1f-098d-4af0-a0a0-a628a9cfc559.jpg",
+    "imagesGallery": [
+      "http://api.quickr.tech/nawy/storage/5e625d1b-a675-4b28-beeb-e632f0ef88d0.jpg",
+      "http://api.quickr.tech/nawy/storage/b1d0cd67-2eb9-445a-bbe7-639ab5582d71.jpg",
+      "http://api.quickr.tech/nawy/storage/6c7eb0d5-31db-4b44-ade2-008b6a7240bd.jpg",
+      "http://api.quickr.tech/nawy/storage/fbf597ca-83d8-445d-891c-d0651c0521ec.jpg"
+    ],
+    "unitAddress": {
+      "fullAddress": "123 Main Street, Downtown",
+      "city": "GHARBIA",
+      "district": "Zamalek",
+      "lat": 30.0444,
+      "lng": 31.2357
+    },
+    "unitDetails": {
+      "unitSize": 120,
+      "numberOfBedrooms": 3,
+      "numberOfBathrooms": 2,
+      "hasElevator": true,
+      "floorNumber": 5
+    },
+    "contactDetails": {
+      "agentName": "John Doe",
+      "phone": "+201234567890",
+      "email": "agent@example.com"
+    },
+    "unitType": "APARTMENT",
+    "propertyCategory": "RESIDENTIAL",
+    "rentingPrice": 15000,
+    "leaseDuration": "YEARLY",
+    "description": "A spacious and modern apartment in the heart of the city."
+  },
+  {
+    "unitName": "Penthouse Paradise",
+    "unitNumber": "B202",
+    "projectName": "Skyline Towers",
+    "available": true,
+    "mainImage": "http://api.quickr.tech/nawy/storage/5e625d1b-a675-4b28-beeb-e632f0ef88d0.jpg",
+    "imagesGallery": [
+      "http://api.quickr.tech/nawy/storage/5e625d1b-a675-4b28-beeb-e632f0ef88d0.jpg",
+      "http://api.quickr.tech/nawy/storage/b1d0cd67-2eb9-445a-bbe7-639ab5582d71.jpg",
+      "http://api.quickr.tech/nawy/storage/6c7eb0d5-31db-4b44-ade2-008b6a7240bd.jpg",
+      "http://api.quickr.tech/nawy/storage/fbf597ca-83d8-445d-891c-d0651c0521ec.jpg"
+    ],
+    "unitAddress": {
+      "fullAddress": "456 High Street, Zamalek",
+      "city": "GHARBIA",
+      "district": "Zamalek",
+      "lat": 30.0455,
+      "lng": 31.2368
+    },
+    "unitDetails": {
+      "unitSize": 180,
+      "numberOfBedrooms": 4,
+      "numberOfBathrooms": 3,
+      "hasElevator": true,
+      "floorNumber": 10
+    },
+    "contactDetails": {
+      "agentName": "Sarah Ali",
+      "phone": "+201098765432",
+      "email": "sarah.ali@example.com"
+    },
+    "unitType": "APARTMENT",
+    "propertyCategory": "RESIDENTIAL",
+    "rentingPrice": 25000,
+    "leaseDuration": "YEARLY",
+    "description": "A stunning penthouse with panoramic city views."
+  },
+  {
+    "unitName": "Cozy Loft",
+    "unitNumber": "C303",
+    "projectName": "Green Heights",
+    "available": false,
+    "mainImage": "http://api.quickr.tech/nawy/storage/b1d0cd67-2eb9-445a-bbe7-639ab5582d71.jpg",
+    "imagesGallery": [
+      "http://api.quickr.tech/nawy/storage/5e625d1b-a675-4b28-beeb-e632f0ef88d0.jpg",
+      "http://api.quickr.tech/nawy/storage/b1d0cd67-2eb9-445a-bbe7-639ab5582d71.jpg",
+      "http://api.quickr.tech/nawy/storage/6c7eb0d5-31db-4b44-ade2-008b6a7240bd.jpg",
+      "http://api.quickr.tech/nawy/storage/fbf597ca-83d8-445d-891c-d0651c0521ec.jpg"
+    ],
+    "unitAddress": {
+      "fullAddress": "789 Park Avenue, Maadi",
+      "city": "CAIRO",
+      "district": "Maadi",
+      "lat": 29.9625,
+      "lng": 31.2615
+    },
+    "unitDetails": {
+      "unitSize": 90,
+      "numberOfBedrooms": 2,
+      "numberOfBathrooms": 1,
+      "hasElevator": false,
+      "floorNumber": 2
+    },
+    "contactDetails": {
+      "agentName": "Omar Hassan",
+      "phone": "+201556789012",
+      "email": "omar.hassan@example.com"
+    },
+    "unitType": "DUPLEX",
+    "propertyCategory": "RESIDENTIAL",
+    "rentingPrice": 10000,
+    "leaseDuration": "MONTHLY",
+    "description": "A cozy loft in a quiet neighborhood, perfect for small families."
+  },
+  {
+    "unitName": "Elegant Duplex",
+    "unitNumber": "D404",
+    "projectName": "The Pearl Residence",
+    "available": true,
+    "mainImage": "http://api.quickr.tech/nawy/storage/6c7eb0d5-31db-4b44-ade2-008b6a7240bd.jpg",
+    "imagesGallery": [
+      "http://api.quickr.tech/nawy/storage/5e625d1b-a675-4b28-beeb-e632f0ef88d0.jpg",
+      "http://api.quickr.tech/nawy/storage/b1d0cd67-2eb9-445a-bbe7-639ab5582d71.jpg",
+      "http://api.quickr.tech/nawy/storage/6c7eb0d5-31db-4b44-ade2-008b6a7240bd.jpg",
+      "http://api.quickr.tech/nawy/storage/fbf597ca-83d8-445d-891c-d0651c0521ec.jpg"
+    ],
+    "unitAddress": {
+      "fullAddress": "101 Sunset Boulevard, New Cairo",
+      "city": "CAIRO",
+      "district": "New Cairo",
+      "lat": 30.0305,
+      "lng": 31.4709
+    },
+    "unitDetails": {
+      "unitSize": 200,
+      "numberOfBedrooms": 5,
+      "numberOfBathrooms": 4,
+      "hasElevator": true,
+      "floorNumber": 6
+    },
+    "contactDetails": {
+      "agentName": "Nour Adel",
+      "phone": "+201234567891",
+      "email": "nour.adel@example.com"
+    },
+    "unitType": "DUPLEX",
+    "propertyCategory": "RESIDENTIAL",
+    "rentingPrice": 28000,
+    "leaseDuration": "YEARLY",
+    "description": "A luxurious duplex with a private rooftop and modern design."
+  },
+  {
+    "unitName": "City View Studio",
+    "unitNumber": "E505",
+    "projectName": "Downtown Residences",
+    "available": false,
+    "mainImage": "http://api.quickr.tech/nawy/storage/fbf597ca-83d8-445d-891c-d0651c0521ec.jpg",
+    "imagesGallery": [
+      "http://api.quickr.tech/nawy/storage/5e625d1b-a675-4b28-beeb-e632f0ef88d0.jpg",
+      "http://api.quickr.tech/nawy/storage/b1d0cd67-2eb9-445a-bbe7-639ab5582d71.jpg",
+      "http://api.quickr.tech/nawy/storage/6c7eb0d5-31db-4b44-ade2-008b6a7240bd.jpg",
+      "http://api.quickr.tech/nawy/storage/fbf597ca-83d8-445d-891c-d0651c0521ec.jpg"
+    ],
+    "unitAddress": {
+      "fullAddress": "33 Nile Corniche, Downtown",
+      "city": "CAIRO",
+      "district": "Downtown",
+      "lat": 30.0607,
+      "lng": 31.2221
+    },
+    "unitDetails": {
+      "unitSize": 60,
+      "numberOfBedrooms": 1,
+      "numberOfBathrooms": 1,
+      "hasElevator": true,
+      "floorNumber": 8
+    },
+    "contactDetails": {
+      "agentName": "Karim Mahmoud",
+      "phone": "+201777888999",
+      "email": "karim.mahmoud@example.com"
+    },
+    "unitType": "OFFICE",
+    "propertyCategory": "COMMERCIAL",
+    "rentingPrice": 7000,
+    "leaseDuration": "MONTHLY",
+    "description": "A stylish studio apartment with a breathtaking city view."
+  }
+]

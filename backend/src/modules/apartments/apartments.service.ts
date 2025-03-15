@@ -4,7 +4,7 @@ import { Apartment } from './entities/apartment.entity';
 import { BaseRepository } from '../../libs/types/base-repository';
 import { CreateApartmentInput } from './dtos/inputs/create-apartment.input';
 import { ErrorCodeEnum } from '../../libs/application/exceptions/error-code.enum';
-import { ILike } from 'typeorm';
+import { ILike, Raw } from 'typeorm';
 import { FilterApartmentsInput } from './dtos/inputs/filter-apartment.input';
 import { SortApartmentInput } from './dtos/inputs/sort-apartment.input';
 import { PaginatorInput } from '../../libs/application/paginator/paginator.input';
@@ -38,7 +38,9 @@ export class ApartmentsService {
     const trimmedSearchKey = searchKey?.trim() || null;
 
     const baseConditions: Record<string, any> = {
-      ...(city && { unitAddress: { city } }),
+      ...(city && {
+        unitAddress: Raw((alias) => `${alias} @> '{"city": "${city}"}'::jsonb`),
+      }),
     };
 
     const searchConditions = trimmedSearchKey
@@ -52,7 +54,6 @@ export class ApartmentsService {
       limit,
     );
   }
-
   // TODO: handle update watch count with queue to ensure no race conation
   public async getApartment(apartmentId: string) {
     const apartment = await this.apartmentRepo.findOneOrError(
