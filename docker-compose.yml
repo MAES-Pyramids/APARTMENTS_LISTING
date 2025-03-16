@@ -25,7 +25,7 @@ services:
 
   backend:
     container_name: nawy-backend
-    image: maespyramids/nawy-backend:2
+    image: maespyramids/nawy-backend:latest
     restart: always
     ports:
       - "3333:3333"
