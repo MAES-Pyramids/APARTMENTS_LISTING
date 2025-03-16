@@ -11,6 +11,8 @@ services:
       TZ: Africa/Cairo
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - nawy-network
 
   redis:
     container_name: nawy-redis
@@ -18,6 +20,8 @@ services:
     restart: always
     ports:
       - "6399:6379"
+    networks:
+      - nawy-network
 
   backend:
     container_name: nawy-backend
@@ -30,7 +34,27 @@ services:
     depends_on:
       - db
       - redis
+    networks:
+      - nawy-network
+
+  # frontend:
+  #   container_name: nawy-frontend
+  #   image: maespyramids/nextjs-app:latest
+  #   restart: always
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - NODE_ENV=production
+  #     - NEXT_PUBLIC_BACKEND_URL=http://localhost:3333
+  #   depends_on:
+  #     - backend
+  #   networks:
+  #     - nawy-network
 
 volumes:
   postgres_data:
   redis_data:
+
+networks:
+  nawy-network:
+    driver: bridge

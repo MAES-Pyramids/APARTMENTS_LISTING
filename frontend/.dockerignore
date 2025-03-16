@@ -1,0 +1,33 @@
+# Ignore node modules and dependencies not needed in the image
+node_modules
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# Ignore build and cache files
+.next/cache
+.next/standalone
+.next/static
+
+# Ignore environment variables (for security)
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# Ignore logs and temporary files
+logs
+*.log
+*.gz
+*.tmp
+
+# Ignore Docker-related files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Ignore Git files
+.git
+.gitignore

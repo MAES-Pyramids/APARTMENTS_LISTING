@@ -7,7 +7,7 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Post('seed')
+  @Post('admins/seed')
   @ApiOperation({ summary: 'Seed default admin user' })
   @ApiResponse({
     status: 200,
