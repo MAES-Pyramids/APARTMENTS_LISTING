@@ -11,10 +11,10 @@ export default function DepartmentFilter() {
 
   return (
     <div className="mb-6">
-      <h3 className="text-lg md:text-2xl text-[#4D5F65] font-bold mb-3">
+      {/* <h3 className="text-lg md:text-2xl text-[#4D5F65] font-bold mb-3">
         Filter
-      </h3>
-      <div className="flex items-center flex-wrap gap-3">
+      </h3> */}
+      {/* <div className="flex items-center flex-wrap gap-3">
         <TextInput
           label="Search"
           value={inputValue}
@@ -22,7 +22,7 @@ export default function DepartmentFilter() {
           onRowChange={(e) => setInputValue(e.target.value)}
           className="w-full"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
