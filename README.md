@@ -31,11 +31,6 @@ Additionally, a Postman collection containing all the API endpoints with a preco
 - **Upload Apartment** (Protected Endpoint)
 - **Upload Images & Videos**
 
-## GitHub Repository
-
-The frontend and backend code has been published in a public GitHub repository:
-
-- **GitHub Repository**: [https://github.com/MAES-Pyramids/APARTMENTS_LISTING](https://github.com/MAES-Pyramids/APARTMENTS_LISTING)
 
 ## Running the Application Using Docker
 
